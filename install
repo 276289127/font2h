@@ -1,4 +1,19 @@
 #!/data/data/com.termux/files/usr/bin/bash
+spinner() {
+        pid=$!
+        spin='\|/-'
+        i=0
+        tput civis
+        while kill -0 $pid 2>/dev/null
+	do
+                i=$(( (i+1) %4 ))
+                printf "\r${cyan1}[${spin:$i:1}]${nc} ${cyan1} ${launch}"
+                sleep .1
+	done
+        clear
+        printf "\r\n${green}[✔]${nc} ${green} ${splashdown}";echo
+        tput cnorm
+}
 big() {
 echo""
 echo""
@@ -22,8 +37,6 @@ echo""
 echo""
 echo""
 echo""
-Help()
-
 sleep 0.0
 clear
 echo " "
@@ -471,12 +484,15 @@ printf "\n\n\n\n\n\n\n\n\n\n"
 
 sleep 1
 }
-wget https://github.com/hk4crprasad/font2h/raw/master/font2h
-big
-wget https://github.com/hk4crprasad/font2h/raw/master/font2c
-big
+download() {
+spinner
+wget https://github.com/hk4crprasad/font2h/raw/master/font2h &> /dev/null
+spinner
+wget https://github.com/hk4crprasad/font2h/raw/master/font2c &> /dev/null
+spinner
 chmod 777 font2c font2h
 spin
+big
 mv font2c font2h $PREFIX/bin
 spinlong ()
 {
