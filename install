@@ -22,8 +22,6 @@ echo""
 echo""
 echo""
 echo""
-Help()
-
 sleep 0.0
 clear
 echo " "
