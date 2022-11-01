@@ -492,4 +492,6 @@ done
 }
 spinlong
 printf "\n\n"
+hyp=`pwd`
 echo -e "\e[31m[\e[33m-\e[31m]\e[32m Type font2h at anywhere to run \e[m "
+rm $pwd/install.sh
