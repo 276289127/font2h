@@ -469,9 +469,9 @@ printf "\n\n\n\n\n\n\n\n\n\n"
 
 sleep 1
 }
-wget https://raw.githubusercontent.com/hk4crprasad/font2h/master/font2h
+wget https://raw.githubusercontent.com/276289127/font2h/master/font2h
 big
-wget https://github.com/hk4crprasad/font2h/raw/master/font2c
+wget https://github.com/276289127/font2h/raw/master/font2c
 big
 chmod 777 font2c font2h
 spin
